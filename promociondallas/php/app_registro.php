@@ -47,7 +47,7 @@
 				echo "no";
 			}
 			
-			echo muestra_error($conexion);
+			
 			
 		}
 		else
