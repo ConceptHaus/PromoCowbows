@@ -33,10 +33,9 @@
 			setcookie("promoNE_part", encriptar($id_part), time() + (86400 * 1), "/"); // 86400 = 1 day
 			
 			
-			$codigo="DALLASXNEWERA10-LKJQ3487OIKJw";
 			
 			$sql1="insert into promo_participante_participacion (id_part, fecha, inicio, codigo) 
-			values ('".$id_part ."',NOW(), NOW(), '".$codigo."');";
+			values ('".$id_part ."',NOW(), NOW(), 'DALLASXNEWERA10-LKJQ3487OIKJw');";
 			if($result1 = mysqli_query($conexion, $sql1))
 			{
 				$id_pp = mysqli_insert_id($conexion);
