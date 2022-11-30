@@ -35,7 +35,7 @@
 			set fin=NOW(), tiempo='".formatMilliseconds($_POST['tiempo'])."', puntos='".$pu."'
 			where id_part='".desencriptar($_COOKIE["promoNE_part"])."';";
 		if($resultY = mysqli_query($conexion, $sqlY))
-		{	envia_mail(desencriptar($_COOKIE['promoNE-email']),1,0,0);
+		{	
 			envia_mail(desencriptar($_COOKIE['promoNE-email']),2,$co,formatMilliseconds($_POST['tiempo']));
 			echo $co;
 		}

@@ -40,6 +40,7 @@
 			{
 				$id_pp = mysqli_insert_id($conexion);
 				setcookie("promoNE_pp", encriptar($id_pp), time() + (86400 * 1), "/"); // 86400 = 1 day
+				envia_mail($_POST['promo-email'],1,0,0);
 				echo "start";
 			}
 			else
