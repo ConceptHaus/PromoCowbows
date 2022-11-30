@@ -35,7 +35,7 @@
 			
 			
 			$sql1="insert into promo_participante_participacion (id_part, fecha, inicio, codigo) 
-			values ('".$id_part ."',NOW(), NOW(), 'DALLASXNEWERA10-LKJQ3487OIKJw');";
+			values ('".$id_part ."',NOW(), NOW(), '');";
 			if($result1 = mysqli_query($conexion, $sql1))
 			{
 				$id_pp = mysqli_insert_id($conexion);
