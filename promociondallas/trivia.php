@@ -1,5 +1,5 @@
 <?php 
-	include_once("php/app_conexion.php");
+	//include_once("php/app_conexion.php");
 	include_once("php/app_questions.php");	
 	$qestions = getQuestions();
 ?>
