@@ -1650,7 +1650,7 @@ function semicolonweb_loadScriptAsync(a, o) {
 				var form = $(this);
 				$.ajax({
 						type: "POST",
-						url: "http://marketing.newera.mx/promociondallas/php/app_registro.php",
+						url: "../php/app_registro.php",
 						data: form.serialize(), 
 						success: function(data)
 						{
