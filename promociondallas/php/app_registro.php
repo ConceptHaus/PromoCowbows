@@ -34,16 +34,22 @@
 			
 			
 			$codigo="DALLASXNEWERA10-LKJQ3487OIKJw";
+			
 			$sql1="insert into promo_participante_participacion (id_part, fecha, inicio, codigo) 
 			values ('".$id_part ."',NOW(), NOW(), '".$codigo."');";
 			if($result1 = mysqli_query($conexion, $sql1))
 			{
 				$id_pp = mysqli_insert_id($conexion);
 				setcookie("promoNE_pp", encriptar($id_pp), time() + (86400 * 1), "/"); // 86400 = 1 day
-				//envia_mail($_POST['promo-email'],1,0,0);
+				echo "start";
+			}
+			else
+			{ 
+				echo "no";
 			}
 			
-			echo "start";
+			echo muestra_error($conexion);
+			
 		}
 		else
 			echo "no";	
