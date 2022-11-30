@@ -1661,7 +1661,7 @@ function semicolonweb_loadScriptAsync(a, o) {
 							{	setCookie('promoJB-inicio', '', -100);
 								$("#promo-submit").hide();
 								$('#regModal').modal('hide');
-								$(location).attr('href','https://marketing.newera.mx/promociondallas/php/trivia.php');
+								$(location).attr('href','https://marketing.newera.mx/promociondallas/trivia.php');
 							}
 							else if(respuesta=='existe')
 							{	$(".existe").removeClass('d-none');
