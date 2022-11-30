@@ -2,8 +2,8 @@
 	function conectarse() 
 	{	
 		$ser="localhost"; 		
-		$user="root";		
-		$pass="";		
+		$user="forge";		
+		$pass="mygoCjnqbPDZpOoKSXGL";		
 		$db="promo_cowbows";
 				
 		$conexion = mysqli_connect($ser ,$user ,$pass) or die("Error de Conexión. Intente más tarde.");
