@@ -21,11 +21,20 @@
 				
 			}
 			
+			$sqlZ="SELECT * FROM promo_participante_respuestas p where id_pp='".desencriptar($_COOKIE["promoNE_pp"])."' and np='".$_POST['que']."';";
+			$resultZ = mysqli_query($conexion,$sqlZ);
+			if ($rowZ = mysqli_fetch_assoc($resultZ)) 
+			{
+				$sqlY="update promo_participante_respuestas set id_preg='".$_POST['sam']."',res='".$_POST['res']."',correcto='".$c."',puntos='".$p."',fecha=NOW() where id_pp='".desencriptar($_COOKIE["promoNE_pp"])."' and np='".$_POST['que']."';";
+				$resultY = mysqli_query($conexion, $sqlY);
+			}
+			else
+			{
+				$sqlY="insert into promo_participante_respuestas(id_pp, np,id_preg, res, correcto, puntos, fecha)
+				values ('".desencriptar($_COOKIE["promoNE_pp"])."','".$_POST['que']."','".$_POST['sam']."','".$_POST['res']."','".$c."','".$p."',NOW());";
+				$resultY = mysqli_query($conexion, $sqlY);
+			}				
 			
-			
-			$sqlY="insert into promo_participante_respuestas(id_pp, np,id_preg, res, correcto, puntos, fecha)
-			values ('".desencriptar($_COOKIE["promoNE_pp"])."','".$_POST['que']."','".$_POST['sam']."','".$_POST['res']."','".$c."','".$p."',NOW());";
-			$resultY = mysqli_query($conexion, $sqlY);
 			
 			if($_POST['que']==5)
 			{

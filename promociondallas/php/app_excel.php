@@ -113,23 +113,23 @@
 					
                  	if($row['acepto']==1) $row['acepto']='Si'; else $row['acepto']='No';
                  		
-                 	$sql2='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="1" and p.id_pp="'.$row['id_pp'].'";';
+                 	$sql2='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="1" and p.id_pp="'.$row['id_pp'].'" order by id_resp desc limit 1;';
 					$resultado2 = $conexion->query($sql2);
 					$row2 = $resultado2->fetch_array();
 					
-					$sql3='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="2" and p.id_pp="'.$row['id_pp'].'";';
+					$sql3='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="2" and p.id_pp="'.$row['id_pp'].'" order by id_resp desc limit 1;';
 					$resultado3 = $conexion->query($sql3);
 					$row3 = $resultado3->fetch_array();
 					
-					$sql4='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="3" and p.id_pp="'.$row['id_pp'].'";';
+					$sql4='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="3" and p.id_pp="'.$row['id_pp'].'" order by id_resp desc limit 1;';
 					$resultado4 = $conexion->query($sql4);
 					$row4 = $resultado4->fetch_array();
 					
-					$sql5='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="4" and p.id_pp="'.$row['id_pp'].'";';
+					$sql5='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="4" and p.id_pp="'.$row['id_pp'].'" order by id_resp desc limit 1;';
 					$resultado5 = $conexion->query($sql5);
 					$row5 = $resultado5->fetch_array();
 					
-					$sql6='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="5" and p.id_pp="'.$row['id_pp'].'";';
+					$sql6='SELECT p.np, pr.pregunta, pr.res, p.res as resparticipante, p.puntos FROM promo_participante_respuestas p, promo_preguntas pr where p.id_preg=pr.id_preg and p.np="5" and p.id_pp="'.$row['id_pp'].'" order by id_resp desc limit 1;';
 					$resultado6 = $conexion->query($sql6);
 					$row6 = $resultado6->fetch_array();
 						
@@ -140,28 +140,28 @@
             		->setCellValue('D'.$i, ($row['mail']))
             		->setCellValue('E'.$i, ($row['estado']))
             		->setCellValue('F'.$i, ($row['tienda']))
-            		->setCellValue('G'.$i, ($row['ticket']))
+            		->setCellValue('G'.$i, ('Ticket: '.$row['ticket']))
             		->setCellValue('H'.$i, ($row['acepto']))
             		->setCellValue('I'.$i, ($row['freg']))
             		->setCellValue('J'.$i, ($row['codigo']))
             		
-            		->setCellValue('K'.$i, ($row['tiempo']))
-            		->setCellValue('L'.$i, ($row2['pregunta'].' - Res: '.$row2['res']))
-            		->setCellValue('M'.$i, ($row2['resparticipante']))
-            		->setCellValue('N'.$i, ($row2['puntos']))
-            		->setCellValue('O'.$i, ($row3['pregunta'].' - Res: '.$row3['res']))
-            		->setCellValue('P'.$i, ($row3['resparticipante']))
-            		->setCellValue('Q'.$i, ($row3['puntos']))
-            		->setCellValue('R'.$i, ($row4['pregunta'].' - Res: '.$row4['res']))
-            		->setCellValue('S'.$i, ($row4['resparticipante']))
-            		->setCellValue('T'.$i, ($row4['puntos']))
-            		->setCellValue('U'.$i, ($row5['pregunta'].' - Res: '.$row5['res']))
-            		->setCellValue('V'.$i, ($row5['resparticipante']))
-            		->setCellValue('W'.$i, ($row5['puntos']))
-            		->setCellValue('X'.$i, ($row6['pregunta'].' - Res: '.$row6['res']))
-            		->setCellValue('Y'.$i, ($row6['resparticipante']))
-            		->setCellValue('Z'.$i, ($row6['puntos']))
-            		->setCellValue('AA'.$i, ($row['puntos']))
+            		->setCellValue('K'.$i, (@$row['tiempo']))
+            		->setCellValue('L'.$i, (@$row2['pregunta'].' - Res: '.@$row2['res']))
+            		->setCellValue('M'.$i, (@$row2['resparticipante']))
+            		->setCellValue('N'.$i, (@$row2['puntos']))
+            		->setCellValue('O'.$i, (@$row3['pregunta'].' - Res: '.@$row3['res']))
+            		->setCellValue('P'.$i, (@$row3['resparticipante']))
+            		->setCellValue('Q'.$i, (@$row3['puntos']))
+            		->setCellValue('R'.$i, (@$row4['pregunta'].' - Res: '.@$row4['res']))
+            		->setCellValue('S'.$i, (@$row4['resparticipante']))
+            		->setCellValue('T'.$i, (@$row4['puntos']))
+            		->setCellValue('U'.$i, (@$row5['pregunta'].' - Res: '.@$row5['res']))
+            		->setCellValue('V'.$i, (@$row5['resparticipante']))
+            		->setCellValue('W'.$i, (@$row5['puntos']))
+            		->setCellValue('X'.$i, (@$row6['pregunta'].' - Res: '.@$row6['res']))
+            		->setCellValue('Y'.$i, (@$row6['resparticipante']))
+            		->setCellValue('Z'.$i, (@$row6['puntos']))
+            		->setCellValue('AA'.$i, (@$row2['puntos']+@$row3['puntos']+@$row4['puntos']+@$row5['puntos']+@$row6['puntos']))
 					;
 					$i++;
 					$cont++;

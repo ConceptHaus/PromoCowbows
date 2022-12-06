@@ -128,9 +128,17 @@
 			$(document).ready(function()
 			{	
 				
-          		 $(window).on('beforeunload', function(){
-	                  return 'Are you sure you want to leave?';
-	           		});
+          		
+          		$(window).bind('beforeunload',function(){
+
+				    setCookie('promoNE_pp', '', -100);
+		        				setCookie('promoNE_part', '', -100);
+		        				setCookie('promoNE_pu', '', -100);
+				        		setCookie('promoNE_co', '', -100);
+
+				    return 'are you sure you want to leave?';
+
+				});
            
 				if(getCookie('promoNE_pp')=="" || getCookie('promoNE_co'))
 				{	setCookie('promoNE_pp', '', -100);

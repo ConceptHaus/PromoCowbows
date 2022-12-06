@@ -55,7 +55,7 @@
 									<div class="dinamica py-3">
 										<div class="row py-2" data-animate="fadeInLeft" >
 											<div class="col-lg-1 col-2 m-auto px-2  center"><h2 class="color-blanco bg-black py-1">1</h2></div>
-											<div class="col-lg-11 col-10 m-auto ">Registra tu compra de cualquier producto New Era y gana al instante <b>10% de descuento en newera.mx</b></div>
+											<div class="col-lg-11 col-10 m-auto ">Registra tu compra de cualquier producto New Era en cualquiera de las tiendas participantes y gana al instante <b>10% de descuento en newera.mx</b></div>
 											<div class="clearfix"></div>
 										</div>
 										<div class="row py-2" data-animate="fadeInLeft" >
