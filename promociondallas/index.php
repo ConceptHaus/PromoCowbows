@@ -198,6 +198,7 @@
 	                                        </div>
 	                                        <div class="col-12 form-group my-1">
 	                                            <input type="text" class="sm-form-control border-form-control" placeholder="Número de Ticket o Pedido" required name="promo-ticket" id="promo-ticket">
+	                                        	<small style="font-size: .6rem; color: #0F3BAA !important;">No olvides conservar tu ticket de compra</small>
 	                                        </div>
 	                                        <div class="col-12 form-group ">
 	                                            <select class="sm-form-control border-form-control formulario" required id="id_tienda" name="id_tienda">
