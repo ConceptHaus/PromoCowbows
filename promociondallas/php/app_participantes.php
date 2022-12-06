@@ -105,7 +105,7 @@
 				<div class="container-md py-3">
 					<div class="row mx-auto center clearfix ">
 						<div class="col-lg-2  m-auto p-5 p-lg-0 px-lg-1">
-							<div><a href="index.php"><img src="../images/newera.png" class="img-fluid"></a></div>
+							<div><a href="../index.php"><img src="../images/newera.png" class="img-fluid"></a></div>
 						</div>
 						<div class="col-lg-3 text-center py-3">
 							<h3>NEW ERA</h3>
