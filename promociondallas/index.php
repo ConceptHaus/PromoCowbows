@@ -175,49 +175,17 @@
             
            <div class="modal fade" tabindex="-1" id="regModal">
                 <div class="block mx-auto modal-dialog modal-xl modal-dialog-centered" >
-                    <div class="modal-content registro">
+                    <div class="modal-content" style="background-image: url(images/registro2.png); 
+	background-size: 20% auto; 
+	background-repeat: no-repeat;
+	background-position: bottom right;">
                     	<div class="row m-0 ">
                     		<div class="p-12 d-block d-lg-none"><div style="height: 250px !important;"></div></div> 
-	                        <div class="col-lg-8 offset-lg-4 py-lg-5 px-lg-4 p-3" >
-	                            <div class="px-lg-4 px-0">
-	                                <h1 class="p-0 m-0 pb-3 reg-h1">REGÍSTRATE Y PARTICIPA</h1>
-	                                <div class="">
-	                                	<form id="form-reg" name="form-reg" class="row mb-0" method="POST">
-	                                        <div class="col-12 form-group my-1">
-	                                            <input type="text" class="sm-form-control border-form-control" placeholder="Nombre Completo" value="<?php echo desencriptar(@$_COOKIE['promoNE-name']); ?>" required name="promo-name" id="promo-name">
-	                                        </div>
-	                                        <div class="col-12 form-group my-1">
-	                                            <input type="email" class="sm-form-control border-form-control" placeholder="Correo Electrónico" value="<?php echo desencriptar(@$_COOKIE['promoNE-email']); ?>" required name="promo-email" id="promo-email">
-	                                        </div>
-	                                        <div class="col-12 form-group my-1">
-	                                            <input type="text" class="sm-form-control border-form-control" placeholder="Celular" value="<?php echo desencriptar(@$_COOKIE['promoNE-phone']); ?>" required name="promo-phone" id="promo-phone">
-	                                        </div>
-	                                        
-	                                        <div class="col-12 form-group my-1">
-	                                            <input type="text" class="sm-form-control border-form-control" placeholder="Estado" value="<?php echo desencriptar(@$_COOKIE['promoNE-city']); ?>" required name="promo-city" id="promo-city">
-	                                        </div>
-	                                        <div class="col-12 form-group my-1">
-	                                            <input type="text" class="sm-form-control border-form-control" placeholder="Número de Ticket o Pedido" required name="promo-ticket" id="promo-ticket">
-	                                        	<small style="font-size: .6rem; color: #0F3BAA !important;">No olvides conservar tu ticket de compra</small>
-	                                        </div>
-	                                        <div class="col-12 form-group ">
-	                                            <select class="sm-form-control border-form-control formulario" required id="id_tienda" name="id_tienda">
-	                                            	<option value="">¿Dónde lo Compraste?</option>
-	                                            </select>
-	                                        </div>
-	                                        <div class="col-12 col-lg-10 form-group ">
-	                                            <input id="radio-8" required class="radio-style" name="promo-terminos" type="checkbox" value="1">
-												<label for="radio-8" class="radio-style-2-label radio-small">He leído y acepto los <a class="reg-a" href="New Era - Terminos y Condiciones.pdf" target="_blank">términos y condiciones</a> y el <a class="reg-a" href="New Era - Aviso de Privacidad.pdf" target="_blank">aviso de privacidad</a>.</label>
-	                                        	<div class="existe d-none">Ticket ya registrado, por favor ingresa un nuevo ticket.</div>
-	                                        </div>
-	                                        
-	                                        <div class="col-12 reg-boton">
-	                                            <button type="submit" id="promo-submit" class="button text-white fw-medium ms-0 topmargin-sm" value="submit"> ¡Lanza el balón y participa!</button>
-	                                        </div>
-	                                        
-	                                        
-	                                    </form>
-	                                </div>
+	                        <div class="col-lg-12 py-lg-5 px-lg-4 p-3" >
+	                            <div class="px-lg-4 px-0 center">
+	                            	<img src="images/newera.png" class="img-fluid w-25">
+	                                <h1 class="p-0 m-0 py-5 reg-h1">PROMOCIÓN FINALIZADA</h1>
+	                                
 	                            </div>
 		                        
 		                    </div>
